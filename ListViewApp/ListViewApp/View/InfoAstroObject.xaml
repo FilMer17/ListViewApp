@@ -5,14 +5,14 @@
              BackgroundColor="Black">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="" />
+        <ToolbarItem IconImageSource="Icon.PNG" />
         <ToolbarItem Text="Vesmírná tělesa" />
     </ContentPage.ToolbarItems>
 
     <StackLayout>
         <ListView
             x:Name="AstroObjectListView"
-            ItemTapped="Handle_ItemTapped"
+            ItemTapped="AstroObjectListView_ItemTapped"
             BackgroundColor="Black"
             CachingStrategy="RecycleElement"
             ItemsSource="{Binding AllAstroObjects}"
@@ -21,8 +21,8 @@
 
             <ListView.Header>
                 <StackLayout Orientation="Horizontal">
-                    <Image Source="" Aspect="AspectFit" HeightRequest="50" />
-                    <Label Text="Lidi" Margin=" 7, 15" />
+                    <Label Text="Tělesa" Margin=" 7, 15" TextColor="White"/>
+                    <Button Text="Přidat" BackgroundColor="#0095e9" TextColor="White" Clicked="Button_Clicked"/>
                 </StackLayout>
             </ListView.Header>
 

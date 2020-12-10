@@ -5,10 +5,10 @@
              BackgroundColor="Black">
     <ContentPage.Content>
         <StackLayout>
-            <Entry Placeholder="Název" HorizontalTextAlignment="Center" Text="{Binding Name}" PlaceholderColor="White" TextColor="White"/>
-            <Entry Placeholder="Typ" HorizontalTextAlignment="Center" Text="{Binding Type}" PlaceholderColor="White" TextColor="White" />
-            <Entry Placeholder="Popis" HorizontalTextAlignment="Center" Text="{Binding Description}" PlaceholderColor="White" TextColor="White" />
-            <Button Text="Uložit" HorizontalOptions="Center" VerticalOptions="End" Clicked="Save_Button_Clicked" />
+            <Entry x:Name="EntryName" Placeholder="Název" HorizontalTextAlignment="Center" Text="{Binding Name}" PlaceholderColor="White" TextColor="White"/>
+            <Entry x:Name="EntryType" Placeholder="Typ" HorizontalTextAlignment="Center" Text="{Binding Type}" PlaceholderColor="White" TextColor="White" />
+            <Entry x:Name="EntryDescription" Placeholder="Popis" HorizontalTextAlignment="Center" Text="{Binding Description}" PlaceholderColor="White" TextColor="White" />
+            <Button Text="Uložit" HorizontalOptions="Center" VerticalOptions="End" Clicked="Save_Button_Clicked" BackgroundColor="White" TextColor="Black"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

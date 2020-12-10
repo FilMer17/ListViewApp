@@ -12,7 +12,7 @@ namespace ListViewApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new ListAstroObjects());
+            MainPage = new NavigationPage(new InfoAstroObject());
         }
 
         protected override void OnStart()

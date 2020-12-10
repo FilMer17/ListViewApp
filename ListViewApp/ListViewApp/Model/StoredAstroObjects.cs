@@ -8,7 +8,6 @@ namespace ListViewApp.Model
     class StoredAstroObjects
     {
         public ObservableCollection<AstroObject> AllAstroObjects { get; set; }
-
         public StoredAstroObjects()
         {
             AllAstroObjects = new ObservableCollection<AstroObject>

@@ -15,7 +15,7 @@ namespace ListViewApp.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddAstroObject : ContentPage
     {
-        ObservableCollection<AstroObject> objectColl;
+        public ObservableCollection<AstroObject> objectColl;
 
         public AddAstroObject()
         {

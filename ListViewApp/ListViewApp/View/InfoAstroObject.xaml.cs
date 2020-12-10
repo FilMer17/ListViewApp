@@ -16,25 +16,31 @@ namespace ListViewApp.View
         public InfoAstroObject()
         {
             InitializeComponent();
-            AstroObject aoModel = new AstroObject();
+            StoredAstroObjects aoModel = new StoredAstroObjects();
             BindingContext = aoModel;
         }
 
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        async void AstroObjectListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (e.Item == null)
             {
                 return;
             }
 
-            Page p = new AddAstroObject(((((ListView)sender).SelectedItem) as Model.AstroObject), (BindingContext as StoredAstroObjects).AllAstroObjects);
-            NavigationPage np = new NavigationPage(p);
-            await Application.Current.MainPage.Navigation.PushAsync(np);
+            Page p = new AddAstroObject(((ListView)sender).SelectedItem as AstroObject, (BindingContext as StoredAstroObjects).AllAstroObjects);
+            await Application.Current.MainPage.Navigation.PushAsync(p);
 
             if ((sender as ListView) != null)
             {
                 (sender as ListView).SelectedItem = null;
             }
+            
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Page p = new AddAstroObject(new AstroObject(), (BindingContext as StoredAstroObjects).AllAstroObjects);
+            Application.Current.MainPage.Navigation.PushAsync(p);
         }
     }
 }
