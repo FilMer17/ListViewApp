@@ -1,6 +1,8 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ListViewApp.Model;
+using ListViewApp.View;
 
 namespace ListViewApp
 {
@@ -10,7 +12,7 @@ namespace ListViewApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new ListAstroObjects());
         }
 
         protected override void OnStart()

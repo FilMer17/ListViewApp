@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListViewApp.View.InfoAstroObject"
+             BackgroundColor="Black">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="" />
+        <ToolbarItem Text="Vesmírná tělesa" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <ListView
+            x:Name="AstroObjectListView"
+            ItemTapped="Handle_ItemTapped"
+            BackgroundColor="Black"
+            CachingStrategy="RecycleElement"
+            ItemsSource="{Binding AllAstroObjects}"
+            Margin="7"
+            HasUnevenRows="True">
+
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="" Aspect="AspectFit" HeightRequest="50" />
+                    <Label Text="Lidi" Margin=" 7, 15" />
+                </StackLayout>
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Margin="7">
+                            <Label Text="{Binding Name}" TextColor="White" />
+                            <Label Text="{Binding Type}" TextColor="White" />
+                            <Label Text="{Binding Description}" TextColor="White" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+    </StackLayout>
+</ContentPage>

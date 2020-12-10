@@ -16,7 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="View\" />
+    <EmbeddedResource Update="View\AddAstroObject.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\InfoAstroObject.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
